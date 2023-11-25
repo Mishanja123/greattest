@@ -4,9 +4,10 @@ const productsBtns = document.querySelectorAll('.products-btn');
 const feedbackBtns = document.querySelectorAll('.feedback-btn');
 const loaderElement = document.getElementById('loader');
 
-const rickandmortyURL = "https://rickandmortyapi.com/api/character";
-const fakestoreURL = "https://fakestoreapi.com/products?limit=6";
-const fakerURL = "https://fakerapi.it/api/v1/texts?_quantity=6";
+const rickandmortyURL = 'https://rickandmortyapi.com/api/character';
+const fakestoreURL = 'htps://fakestoreapi.com/products?limit=6';
+const fakerURL = 'https://fakerapi.it/api/v1/texts?_quantity=6';
+
 
 clientsBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -34,7 +35,6 @@ feedbackBtns.forEach(btn => {
     }); 
 });
 
-
 async function fetchDataAndRender(url, source) {
     try {
         loaderElement.classList.remove('loader-false');
@@ -45,10 +45,16 @@ async function fetchDataAndRender(url, source) {
 
         renderData(data, source);
     } catch (error) {
-        displayAlertModal(error)
+        displayAlertModal(error,_,_)
         console.error(error);
     }
-}
+};
 
+async function handleDOMContentLoaded() {
+    setActiveButton('.clients-btn');
 
+    await fetchDataAndRender(rickandmortyURL, 'clients');
 
+    document.removeEventListener('DOMContentLoaded', handleDOMContentLoaded);
+};
+document.addEventListener('DOMContentLoaded', handleDOMContentLoaded);

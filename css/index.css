@@ -95,7 +95,7 @@ button {
     position: relative;
     text-align: center;
     padding: 80px 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('../images/background/header-bg.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('../images/header-bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;   
@@ -115,6 +115,7 @@ button {
 .close-menu-svg {
     fill: var(--color-red);
 }
+
 .header-heading {
     font-weight: 300;
     margin-bottom: 10px;
@@ -263,6 +264,7 @@ button {
 .checkbox-label {
     font-size: 10px;  
     margin-bottom: 20px;  
+    cursor: pointer;
 }
 
 .submit-btn {
@@ -273,14 +275,14 @@ button {
 }
 
 .submit-btn:disabled {
-    border-color: #ccc;
+    border-color: var(--color-dark);
     background-color: #ccc;
     cursor: not-allowed;
 }
 
 .error-message {
     font-size: 10px;
-    color: red;
+    color: var(--color-red);
     margin-top: 5px;
 }
 
@@ -344,7 +346,7 @@ button {
     background: var(--color-white);
     padding: 50px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     position: relative;
 }
 

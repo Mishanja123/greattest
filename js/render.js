@@ -5,7 +5,7 @@ function renderData(data, source) {
         case 'clients':
             const clientsHTML = data.results.map(client => `
                 <div class='client portfolio-content'>
-                    <img class='client-img portfolio-img' src="${client.image}" alt="Photo">
+                    <img class='client-img portfolio-img' src='${client.image}' alt='Photo'>
                     <p class='client-name'>${client.name}</p>
                 </div>
             `);
@@ -16,7 +16,7 @@ function renderData(data, source) {
         case 'products':
              const productsHTML = data.map(product => `
                 <div class='product portfolio-content'>
-                    <img class='product-img portfolio-img' src="${product.image}" alt="Photo">
+                    <img class='product-img portfolio-img' src='${product.image}' alt='Photo'>
                     <p class='product-name'>${product.title}</p>
                 </div>
             `);
@@ -39,9 +39,4 @@ function renderData(data, source) {
         default:
             console.error('Unknown data source:', source);
     }
-}
-
-document.addEventListener('DOMContentLoaded', async function() {
-    setActiveButton('.clients-btn');
-    await fetchDataAndRender(rickandmortyURL, 'clients');
-});
+};

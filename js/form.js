@@ -10,7 +10,7 @@ function validateName() {
         nameError.textContent = '';
         return true;
     }
-}
+};
 
 function validateEmail() {
     const emailInput = document.getElementById('email');
@@ -24,7 +24,7 @@ function validateEmail() {
         emailError.textContent = '';
         return true;
     }
-}
+};
 
 function submitForm() {
     const nameInput = document.getElementById('name');
@@ -32,11 +32,11 @@ function submitForm() {
     if (validateName() && validateEmail() && document.getElementById('allowProcessing').checked) {
         let name = nameInput.value
         let email = emailInput.value
-        displayAlertModal("Form submited successfuly!", name, email );
+        displayAlertModal('Form submited successfuly!', name, email );
         document.getElementById('myForm').reset();
         document.getElementById('submitBtn').disabled = true;
     }
-}
+};
 
 document.getElementById('name').addEventListener('input', function () {
     validateName();
@@ -58,4 +58,4 @@ function checkSubmitButton() {
     const checkboxChecked = document.getElementById('allowProcessing').checked;
 
     document.getElementById('submitBtn').disabled = !(nameValid && emailValid && checkboxChecked);
-}
+};
