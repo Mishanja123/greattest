@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container container">
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          <svg class="open-menu-svg" width="35" height="35">
+            <use href="./images/icons/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="header-content">
+          <h1 class="header-heading">Let's Make Something Great</h1>
+          <p class="header-paragraph">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <h2 class="main-heading">Portfolio</h2>
+          <nav class="portfolio">
+            <ul class="portfolio-list">
+              <li class="portfolio-item">
+                <button class="clients-btn portfolio-btn">Clients</button>
+              </li>
+              <li class="portfolio-item">
+                <button class="products-btn portfolio-btn">Products</button>
+              </li>
+              <li class="portfolio-item">
+                <button class="feedback-btn portfolio-btn">Feedback</button>
+              </li>
+            </ul>
+          </nav>
+          <div id="loader" class="loader-false"></div>
+          <div id="output" class="portfolio-content-box"></div>
+        </div>
+      </section>
+
+      <section class="section form-section">
+        <div class="container">
+          <form id="myForm" class="form-container">
+            <h2 class="main-heading form-heading">
+              I WANT TO GET FRESH UPDATES
+            </h2>
+            <label for="name"
+              >FIRST NAME:
+              <input
+                class="data-input"
+                type="text"
+                id="name"
+                name="name"
+                required
+              />
+            </label>
+            <span class="error-message" id="nameError"></span>
+
+            <label for="email"
+              >EMAIL:
+              <input
+                class="data-input"
+                type="email"
+                id="email"
+                name="email"
+                required
+              />
+            </label>
+            <span class="error-message" id="emailError"></span>
+
+            <label class="checkbox-label" for="allowProcessing">
+              <input
+                type="checkbox"
+                id="allowProcessing"
+                name="allowProcessing"
+                class="checkbox"
+              />
+              I consent to the processing of personal data
+            </label>
+
+            <button
+              class="submit-btn"
+              id="submitBtn"
+              disabled
+              onclick="submitForm()"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>All right reserved 2023</p>
+      </div>
+    </footer>
+
+    <div class="menu-container js-menu-container" id="menu">
+      <button class="menu-toggle close-btn js-close-menu">
+        <svg class="close-menu-svg" width="35" height="35">
+          <use href="./images/icons/icons.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <img class="menu-img" src="./images/menu.png" alt="avatar" />
+      <div class="menu-nav">
+        <ul class="menu-list">
+          <li class="menu-item">
+            <button class="clients-btn portfolio-btn menu-btn">Clients</button>
+          </li>
+          <li class="menu-item">
+            <button class="products-btn portfolio-btn menu-btn">
+              Products
+            </button>
+          </li>
+          <li class="menu-item">
+            <button class="feedback-btn portfolio-btn menu-btn">
+              Feedback
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/active-btn.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/fetch.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/alert-modal.js"></script>
+  </body>
+</html>
