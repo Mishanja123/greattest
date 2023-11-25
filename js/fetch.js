@@ -5,7 +5,7 @@ const feedbackBtns = document.querySelectorAll('.feedback-btn');
 const loaderElement = document.getElementById('loader');
 
 const rickandmortyURL = 'https://rickandmortyapi.com/api/character';
-const fakestoreURL = 'htps://fakestoreapi.com/products?limit=6';
+const fakestoreURL = 'https://fakestoreapi.com/products?limit=6';
 const fakerURL = 'https://fakerapi.it/api/v1/texts?_quantity=6';
 
 
