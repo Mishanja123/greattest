@@ -167,8 +167,11 @@ button {
     background: none;
     border: none;
     color: var(--color-white);
+
+    transition: all 0.1s;
 }
-.portfolio-btn.active {
+
+.portfolio-btn.active, .portfolio-btn:hover {
     border-bottom: 2px solid var(--color-red);
 }
 
